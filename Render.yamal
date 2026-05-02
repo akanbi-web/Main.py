@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: js-forex-sentinel
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run main.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: ALERT_EMAIL_TO
+        value: jamesgoodwin9726@gmail.com
+      - key: SMTP_HOST
+        sync: smtp.gmail.com
+      - key: SMTP_PORT
+        sync: 587
+      - key: SMTP_USERNAME
+        sync: jamesgoodwin9726@gmail.com
+      - key: SMTP_PASSWORD
+        sync: rqnz bufc brah fipm
+      - key: SESSION_SECRET
+        sync: akanbi 
