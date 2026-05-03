@@ -398,7 +398,7 @@ while True:
             .map(style_status, subset=["Status"])
             .map(style_trend,  subset=["Trend (200 EMA)"])
         )
-        st.dataframe(styled, width="stretch", hide_index=True)
+       st.dataframe(styled, use_container_width=True, hide_index=True)
 
     with chart_hdr.container():
         st.subheader(f"{chart_pair} — Last 1 Day")
